@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% block title %}Rotaract Club of CVS | Projects{% endblock title %}
+{% block body %}
+<!--Projects-->
+<div class="outer__inner">
+    <div class="section wishlists js-tabs">
+        <div class="wishlists__center center">
+            <div class="control"><a class="button-stroke button-small control__button" href="/">
+                    <svg class="icon icon-arrow-left">
+                        <use xlink:href="#icon-arrow-left"></use>
+                    </svg><span>Go home</span></a>
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/ ">Home</a></li>
+                    <li class="breadcrumbs__item">Projects</li>
+                </ul>
+            </div>
+            <div class="wishlists__details">
+                <h2 class="wishlists__title h2">Projects</h2>
+                <div class="wishlists__counter">You added 8 items to wishlists</div>
+            </div>
+            <div class="wishlists__sorting">
+                <div class="nav">
+                    <a class="nav__link js-tabs-link active" href="#">Community Services</a><a
+                        class="nav__link js-tabs-link" href="#">International Services</a><a class="nav__link js-tabs-link"
+                        href="#">Professional Services</a><a class="nav__link js-tabs-link" href="#">Vocational Services</a>
+                        <a class="nav__link js-tabs-link" href="#">Club Services</a>
+                </div>
+                <div class="sorting__select tablet-show">
+                    <select class="select js-tabs-select">
+                        <option>Community Services </option>
+                        <option>International Services</option>
+                        <option>Professional Services</option>
+                        <option>Vocational Services</option>
+                        <option>Club Services</option>
+                    </select>
+                </div>
+                <div class="sorting__select">
+                    <select class="select">
+                        <option>Upcoming</option>
+                        <option>Future</option>
+                        <option>Past</option>
+                    </select>
+                </div>
+            </div>
+            <div class="wishlists__container">
+            
+                <div class="wishlists__item js-tabs-item">
+                
+                    <div class="wishlists__list">
+                    {% for x in community %}
+                        <a class="card" href="{{x.url}}">
+                            <div class="card__preview">
+                                <img srcSet="{{x.img.url}}"
+                                    src="{{x.img.url}}" alt="{{x.text}}" />
+                                <div class="category card__category">{{x.category}}</div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__line">
+                                    <div class="card__title">{{x.text}}</div>   
+                                </div>   
+                            </div>
+                        </a>
+                    {% endfor %}
+                    </div>
+                
+                    <div class="wishlists__btns">
+                        <button class="button-stroke wishlists__button">
+                            <div class="loader"></div><span>Show more</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="wishlists__item js-tabs-item">
+                   <div class="wishlists__list">
+                    {% for x in international %}
+                        <a class="card" href="{{x.url}}">
+                            <div class="card__preview">
+                                <img srcSet="{{x.img.url}}"
+                                    src="{{x.img.url}}" alt="{{x.text}}" />
+                                <div class="category card__category">{{x.category}}</div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__line">
+                                    <div class="card__title">{{x.text}}</div>   
+                                </div>   
+                            </div>
+                        </a>
+                    {% endfor %}
+                    </div>
+                
+                    <div class="wishlists__btns">
+                        <button class="button-stroke wishlists__button">
+                            <div class="loader"></div><span>Show more</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="wishlists__item js-tabs-item">
+                    <div class="wishlists__list">
+                    {% for x in professional %}
+                        <a class="card" href="{{x.url}}">
+                            <div class="card__preview">
+                                <img srcSet="{{x.img.url}}"
+                                    src="{{x.img.url}}" alt="{{x.text}}" />
+                                <div class="category card__category">{{x.category}}</div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__line">
+                                    <div class="card__title">{{x.text}}</div>   
+                                </div>   
+                            </div>
+                        </a>
+                    {% endfor %}
+                    </div>
+                    <div class="wishlists__btns">
+                        <button class="button-stroke wishlists__button">
+                            <div class="loader"></div><span>Show more</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="wishlists__item js-tabs-item">
+                   <div class="wishlists__list">
+                    {% for x in vocational %}
+                        <a class="card" href="{{x.url}}">
+                            <div class="card__preview">
+                                <img srcSet="{{x.img.url}}"
+                                    src="{{x.img.url}}" alt="{{x.text}}" />
+                                <div class="category card__category">{{x.category}}</div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__line">
+                                    <div class="card__title">{{x.text}}</div>   
+                                </div>   
+                            </div>
+                        </a>
+                    {% endfor %}
+                    </div>
+                    <div class="wishlists__btns">
+                        <button class="button-stroke wishlists__button">
+                            <div class="loader"></div><span>Show more</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="wishlists__item js-tabs-item">
+                   <div class="wishlists__list">
+                    {% for x in club %}
+                        <a class="card" href="{{x.url}}">
+                            <div class="card__preview">
+                                <img srcSet="{{x.img.url}}"
+                                    src="{{x.img.url}}" alt="{{x.text}}" />
+                                <div class="category card__category">{{x.category}}</div>
+                            </div>
+                            <div class="card__body">
+                                <div class="card__line">
+                                    <div class="card__title">{{x.text}}</div>   
+                                </div>   
+                            </div>
+                        </a>
+                    {% endfor %}
+                    </div>
+                    <div class="wishlists__btns">
+                        <button class="button-stroke wishlists__button">
+                            <div class="loader"></div><span>Show more</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    
+</div>
+{% endblock body %}

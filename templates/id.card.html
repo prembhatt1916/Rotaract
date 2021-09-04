@@ -1,0 +1,161 @@
+{% extends 'base.html' %}
+{% block title %}Rotaract Club of CVS | ID Card{% endblock title %}
+{% block body %}
+
+<div class="outer__inner">
+    <div class="section wishlists js-tabs">
+        <div class="wishlists__center center">
+            <div class="control">
+                <a class="button-stroke button-small control__button" href="/">
+                    <svg class="icon icon-arrow-left">
+                        <use xlink:href="#icon-arrow-left"></use>
+                    </svg><span>Go home</span>
+                </a>
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/ ">Home</a></li>
+                    
+                    <li class="breadcrumbs__item">Generate Your ID Card</li>
+                </ul>
+            </div>
+
+         <div class="upload__inner">
+            <div class="upload__wrapper">
+              <div class="upload__head">
+                <h2 class="upload__title h2">Generate Your ID Card</h2>
+                
+              </div>
+              <div class="upload__form">
+                <div class="upload__list">
+                  <div class="upload__item">
+                    <div class="upload__category">Upload photos</div>
+                    <div class="upload__note">
+                      Drag or choose your file to upload
+                    </div>
+                    <div class="upload__file">
+                      <input class="upload__input" type="file" />
+                      <div class="upload__icon">
+                        <svg class="icon icon-upload-file">
+                          <use xlink:href="#icon-upload-file"></use>
+                        </svg>
+                      </div>
+                      <div class="upload__format">
+                        PNG, GIF, WEBP, MP4. Max 500Mb.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="upload__item">
+                    <div class="upload__category">Property details</div>
+                    <div class="upload__fieldset">
+                      <div class="field">
+                        <div class="field__label">Your Awesome Name </div>
+                        <div class="field__wrap">
+                          <input class="field__input" type="text" name="title"
+                            placeholder='e. g. "Rtr. Prem Bhatt"' required />
+                        </div>
+                      </div>
+                      <div class="upload__row">
+                        <div class="upload__col upload__col_w70">
+                          <div class="upload__label">Rotary ID</div>
+                          <div class="upload__line">
+                            <div class="upload__cell">
+                              <div class="field field_empty">
+                                <div class="field__wrap">
+                                  <input class="field__input" type="text" name="price" placeholder='e. g. "1234567"'
+                                    required />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="upload__cell">
+                              <div class="field field_empty">
+                                <div class="field__wrap">
+                                  <select class="select">
+                                    <option>Rotaractor</option>
+                                    <option>Director</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                       <div class="upload__fieldset">
+                      <div class="upload__row">
+                        <div class="upload__col upload__col_w50">
+                          <div class="field">
+                            <div class="field__wrap">
+                              <input class="field__input" type="text" name="service1" placeholder="Your Course"
+                                required />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="upload__col upload__col_w50">
+                          <div class="field">
+                            <div class="field__wrap">
+                              <input class="field__input" type="text" name="service2" placeholder=" Year e.g.  1, 2, 3"
+                                required />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="upload__row">
+                        <div class="upload__col upload__col_w50">
+                          <div class="field">
+                            <div class="field__wrap">
+                              <input class="field__input" type="text" name="service1" placeholder="Mail ID"
+                                required />
+                            </div>
+                          </div>
+                        </div>
+                        <div class="upload__col upload__col_w50">
+                          <div class="field">
+                            <div class="field__wrap">
+                              <input class="field__input" type="text" name="service2" placeholder="Contact Number"
+                                required />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                      
+                      
+                    </div>
+                  </div>
+                  <div class="upload__item">
+                    <div class="upload__category">Address</div>
+                    <div class="field field_map">
+                        <div class="field__wrap">
+                          <input class="field__input" type="text" name="location"
+                            placeholder="e. g. “Faridabad, Otago, New Zealand”" required />
+                        </div>
+                      </div>
+                   
+                  </div>
+                  
+                </div>
+                <div class="upload__foot">
+                  <button class="button-stroke upload__button js-upload-button">
+                    Preview
+                  </button>
+                  <div class="button upload__button">
+                    <span>Submit for review</span>
+                    <svg class="icon icon-arrow-next">
+                      <use xlink:href="#icon-arrow-next"></use>
+                    </svg>
+                  </div>
+                  <div class="upload__saving">
+                    Auto saving
+                    <div class="loader"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+            
+        </div>
+    </div>
+
+
+</div>
+
+{% endblock body %}

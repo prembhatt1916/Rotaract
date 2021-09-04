@@ -1,0 +1,672 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<!---->
+<div class="outer__inner">
+
+  <!--Hero Section Start-->
+  <div class="section main main_stays">
+    <div class="main__center center">
+      <div class="main__preview">
+        {% for x in hero %}
+        <picture>
+          <source media="(max-width: 767px)" srcSet="{{x.img_mobile.url}}"><img src="{{x.img_web.url}}" alt="Main">
+        </picture>
+        <div class="main__wrap">
+          <h1 class="main__title hero">{{x.text}} </h1>
+          <div class="main__info info">{{x.text_subtitle}}</div><a class="button main__button" href="{{x.url}}">Know
+            More</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!--Hero Section End-->
+
+  <!--Note Section start-->
+  <div class="testimonials__center center js-tabs">
+    <div class="adventure__head">
+      <h2 class="adventure__title h2">Let’s go on an adventure</h2>
+      <div class="adventure__info info">Find and book a great experience.</div>
+    </div>
+    <div class="testimonials__container">
+      <div class="testimonials__item js-tabs-item" style="display: none;">
+        <div class="testimonials__row">
+          <div class="testimonials__col">
+
+            <div class="testimonials__comment">The Rotaract Club of College of Vocational Studies strives to provide the
+              best
+              experience to all its members. It was formed in 2018 and since then,it is working on leadership and
+              professional development of its members.
+              Hence, our theme for this year is LEAD(Leadership Entrepreneurship Achieve Development). This year we want
+              to focus
+              on all these avenues. We sincerely work towards the Rotaract motto ie Self development - Fellowship
+              through service.
+              We have successfully completed many projects with an aim to promote community development. We will
+              continue to serve the
+              society to bring about a positive social economic change in the lives of people.
+            </div>
+            <div class="testimonials__details">
+              <div class="testimonials__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M2.804 5C2 6.392 2 8.262 2 12s0 5.608.804 7A6 6 0 0 0 5 21.196C6.392 22 8.262 22 12 22s5.608 0 7-.804A6 6 0 0 0 21.196 19C22 17.608 22 15.739 22 12s0-5.608-.804-7A6 6 0 0 0 19 2.804C17.608 2 15.739 2 12 2s-5.608 0-7 .804A6 6 0 0 0 2.804 5zm4.708 7.31c-.261-.783-.133-1.903.756-3.014.488-.61 1.056-1.083 1.704-1.421a.41.41 0 0 0 .186-.545c-.095-.184-.319-.261-.503-.166-1.17.607-2.057 1.381-2.662 2.32C6.331 10.512 6 11.674 6 12.972c0 1.998.929 3.78 2.948 3.78a2.47 2.47 0 0 0 2.135-1.21c.538-.897.466-2.283-.378-3.071-.835-.78-2.207-.944-3.194-.161zm6.576 0c-.261-.783-.133-1.903.756-3.014.488-.61 1.056-1.083 1.704-1.421a.41.41 0 0 0 .186-.545c-.095-.184-.319-.261-.503-.166-1.169.607-2.057 1.381-2.662 2.32-.661 1.027-.992 2.189-.992 3.487 0 1.998.929 3.78 2.948 3.78 1.367 0 2.476-1.031 2.476-2.476 0-1.571-1.117-2.476-2.476-2.476-.517 0-.995.17-1.436.51z"
+                    fill="#777E90"></path>
+                </svg>
+              </div>
+              <div class="testimonials__author">Rtr. Tushar Patial</div>
+
+            </div>
+          </div>
+          <div class="testimonials__col">
+            <div class="travel__col">
+              <div class="travel__wrapper">
+                <div class="travel__gallery">
+                  <div class="travel__bg">
+                    <img srcSet="static\img\tushar3.png" src="static\img\tushar3.png" alt="President">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials__item js-tabs-item" style="display: block;">
+        <div class="testimonials__row">
+          <div class="testimonials__col">
+
+            <div class="testimonials__comment">Lorem, ipsum dolor sit amet consectetur adipisicing elit. A delectus
+              quas enim molestiae blanditiis assumenda doloremque nostrum omnis, quam eligendi illo, sint magnam. Nemo
+              ut veniam harum assumenda, reprehenderit facilis. Lorem ipsum dolor sit amet consectetur, adipisicing
+              elit. Quasi sit nisi alias, reiciendis necessitatibus cupiditate, sapiente repudiandae harum veniam
+              blanditiis voluptatibus ea assumenda modi fugit accusamus quod voluptatem sint culpa.</div>
+            <div class="testimonials__details">
+              <div class="testimonials__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M2.804 5C2 6.392 2 8.262 2 12s0 5.608.804 7A6 6 0 0 0 5 21.196C6.392 22 8.262 22 12 22s5.608 0 7-.804A6 6 0 0 0 21.196 19C22 17.608 22 15.739 22 12s0-5.608-.804-7A6 6 0 0 0 19 2.804C17.608 2 15.739 2 12 2s-5.608 0-7 .804A6 6 0 0 0 2.804 5zm4.708 7.31c-.261-.783-.133-1.903.756-3.014.488-.61 1.056-1.083 1.704-1.421a.41.41 0 0 0 .186-.545c-.095-.184-.319-.261-.503-.166-1.17.607-2.057 1.381-2.662 2.32C6.331 10.512 6 11.674 6 12.972c0 1.998.929 3.78 2.948 3.78a2.47 2.47 0 0 0 2.135-1.21c.538-.897.466-2.283-.378-3.071-.835-.78-2.207-.944-3.194-.161zm6.576 0c-.261-.783-.133-1.903.756-3.014.488-.61 1.056-1.083 1.704-1.421a.41.41 0 0 0 .186-.545c-.095-.184-.319-.261-.503-.166-1.169.607-2.057 1.381-2.662 2.32-.661 1.027-.992 2.189-.992 3.487 0 1.998.929 3.78 2.948 3.78 1.367 0 2.476-1.031 2.476-2.476 0-1.571-1.117-2.476-2.476-2.476-.517 0-.995.17-1.436.51z"
+                    fill="#777E90"></path>
+                </svg>
+              </div>
+              <div class="testimonials__author">Rtn. CB Singh (CA)</div>
+
+            </div>
+          </div>
+          <div class="testimonials__col">
+            <div class="travel__col">
+              <div class="travel__wrapper">
+                <div class="travel__gallery">
+                  <div class="travel__bg">
+                    <img srcSet="static\img\sbsingh.png" src="static\img\sbsingh.png" alt="SB singh">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials__item js-tabs-item" style="display: none;">
+        <div class="testimonials__row">
+          <div class="testimonials__col">
+
+            <div class="testimonials__comment"> Rotaract Club of College of Vocational Studies is one of the
+              organisations recognised by Rotary International. Chartered in 2018 in the College as one of the most
+              active clubs, it falls under Rotaract District 3011. With more than 30 awards won in 2020-21, it has been
+              awarded as the best institution based club in Silver Category. I am immensely proud to be associated with
+              this club as it's Mentor, where the members work tirelessly towards fulfilling the global goals of peace,
+              health, education, environment and economic development. Even in the pandemic the club has been doing it's
+              part by spreading awareness and dedicating itself to community service.
+              I urge all the current and new members of the club to put their best foot forward in the service and hope
+              that they continue to render themselves in the selfless duty they have towards the community
+            </div>
+            <div class="testimonials__details">
+              <div class="testimonials__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M2.804 5C2 6.392 2 8.262 2 12s0 5.608.804 7A6 6 0 0 0 5 21.196C6.392 22 8.262 22 12 22s5.608 0 7-.804A6 6 0 0 0 21.196 19C22 17.608 22 15.739 22 12s0-5.608-.804-7A6 6 0 0 0 19 2.804C17.608 2 15.739 2 12 2s-5.608 0-7 .804A6 6 0 0 0 2.804 5zm4.708 7.31c-.261-.783-.133-1.903.756-3.014.488-.61 1.056-1.083 1.704-1.421a.41.41 0 0 0 .186-.545c-.095-.184-.319-.261-.503-.166-1.17.607-2.057 1.381-2.662 2.32C6.331 10.512 6 11.674 6 12.972c0 1.998.929 3.78 2.948 3.78a2.47 2.47 0 0 0 2.135-1.21c.538-.897.466-2.283-.378-3.071-.835-.78-2.207-.944-3.194-.161zm6.576 0c-.261-.783-.133-1.903.756-3.014.488-.61 1.056-1.083 1.704-1.421a.41.41 0 0 0 .186-.545c-.095-.184-.319-.261-.503-.166-1.169.607-2.057 1.381-2.662 2.32-.661 1.027-.992 2.189-.992 3.487 0 1.998.929 3.78 2.948 3.78 1.367 0 2.476-1.031 2.476-2.476 0-1.571-1.117-2.476-2.476-2.476-.517 0-.995.17-1.436.51z"
+                    fill="#777E90"></path>
+                </svg>
+              </div>
+              <div class="testimonials__author">Asst. Prof. Barkha Jamwal</div>
+
+            </div>
+          </div>
+          <div class="testimonials__col">
+            <div class="travel__col">
+              <div class="travel__wrapper">
+
+                <div class="travel__gallery">
+                  <div class="travel__bg">
+                    <img srcSet="static\img\barkha.png" src="static\img\barkha.png" alt="Travel">
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials__item js-tabs-item" style="display: none;">
+        <div class="testimonials__row">
+          <div class="testimonials__col">
+
+            <div class="testimonials__comment">I have been a part of the Rotaract movement ,and thus it tempts me
+              to highlight the endless possibilities we’ll have if we associate with
+              this movement closely. It connects CVS's College Rotaractors with the Rotaract movement.
+              It is involved in community service aimed at improving life in our
+              local communities.They promote socializing, making friends and
+              having a good time fellowship. They develop skills of student
+              members with opportunities for professional development. They
+              provide international services where student members participate in
+              any international rotary event. This can include interaction with even
+              non- rotary service minded community leaders of another country.
+            </div>
+            <div class="testimonials__details">
+              <div class="testimonials__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M2.804 5C2 6.392 2 8.262 2 12s0 5.608.804 7A6 6 0 0 0 5 21.196C6.392 22 8.262 22 12 22s5.608 0 7-.804A6 6 0 0 0 21.196 19C22 17.608 22 15.739 22 12s0-5.608-.804-7A6 6 0 0 0 19 2.804C17.608 2 15.739 2 12 2s-5.608 0-7 .804A6 6 0 0 0 2.804 5zm4.708 7.31c-.261-.783-.133-1.903.756-3.014.488-.61 1.056-1.083 1.704-1.421a.41.41 0 0 0 .186-.545c-.095-.184-.319-.261-.503-.166-1.17.607-2.057 1.381-2.662 2.32C6.331 10.512 6 11.674 6 12.972c0 1.998.929 3.78 2.948 3.78a2.47 2.47 0 0 0 2.135-1.21c.538-.897.466-2.283-.378-3.071-.835-.78-2.207-.944-3.194-.161zm6.576 0c-.261-.783-.133-1.903.756-3.014.488-.61 1.056-1.083 1.704-1.421a.41.41 0 0 0 .186-.545c-.095-.184-.319-.261-.503-.166-1.169.607-2.057 1.381-2.662 2.32-.661 1.027-.992 2.189-.992 3.487 0 1.998.929 3.78 2.948 3.78 1.367 0 2.476-1.031 2.476-2.476 0-1.571-1.117-2.476-2.476-2.476-.517 0-.995.17-1.436.51z"
+                    fill="#777E90"></path>
+                </svg>
+              </div>
+              <div class="testimonials__author">Rtr. Prem Bhatt</div>
+
+            </div>
+          </div>
+          <div class="testimonials__col">
+            <div class="travel__col">
+              <div class="travel__wrapper">
+
+                <div class="travel__gallery">
+                  <div class="travel__bg">
+                    <img srcSet="static\img\prembhatt.png" src="static\img\prembhatt.png" alt="Prem Bhatt 1916">
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials__item js-tabs-item" style="display: none;">
+        <div class="testimonials__row">
+          <div class="testimonials__col">
+
+            <div class="testimonials__comment">I have been a part of the Rotaract movement ,and thus it tempts me
+              to highlight the endless possibilities we’ll have if we associate with
+              this movement closely.
+              It connects CVS's College Rotaractors with the Rotaract movement.
+              It is involved in community service aimed at improving life in our
+              local communities.They promote socializing, making friends and
+              having a good time fellowship. They develop skills of student
+              members with opportunities for professional development. They
+              provide international services where student members participate in
+              any international rotary event. This can include interaction with even
+              non- rotary service minded community leaders of another country.
+            </div>
+            <div class="testimonials__details">
+              <div class="testimonials__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd"
+                    d="M2.804 5C2 6.392 2 8.262 2 12s0 5.608.804 7A6 6 0 0 0 5 21.196C6.392 22 8.262 22 12 22s5.608 0 7-.804A6 6 0 0 0 21.196 19C22 17.608 22 15.739 22 12s0-5.608-.804-7A6 6 0 0 0 19 2.804C17.608 2 15.739 2 12 2s-5.608 0-7 .804A6 6 0 0 0 2.804 5zm4.708 7.31c-.261-.783-.133-1.903.756-3.014.488-.61 1.056-1.083 1.704-1.421a.41.41 0 0 0 .186-.545c-.095-.184-.319-.261-.503-.166-1.17.607-2.057 1.381-2.662 2.32C6.331 10.512 6 11.674 6 12.972c0 1.998.929 3.78 2.948 3.78a2.47 2.47 0 0 0 2.135-1.21c.538-.897.466-2.283-.378-3.071-.835-.78-2.207-.944-3.194-.161zm6.576 0c-.261-.783-.133-1.903.756-3.014.488-.61 1.056-1.083 1.704-1.421a.41.41 0 0 0 .186-.545c-.095-.184-.319-.261-.503-.166-1.169.607-2.057 1.381-2.662 2.32-.661 1.027-.992 2.189-.992 3.487 0 1.998.929 3.78 2.948 3.78 1.367 0 2.476-1.031 2.476-2.476 0-1.571-1.117-2.476-2.476-2.476-.517 0-.995.17-1.436.51z"
+                    fill="#777E90"></path>
+                </svg>
+              </div>
+              <div class="testimonials__author">Rtr. Mansi Biala</div>
+
+            </div>
+          </div>
+          <div class="testimonials__col">
+            <div class="travel__col">
+              <div class="travel__wrapper">
+
+                <div class="travel__gallery">
+                  <div class="travel__bg">
+                    <img srcSet="static\img\mansi.png" src="static\img\mansi.png" alt="Travel">
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials__nav">
+      <a class="testimonials__link js-tabs-link" href="#" data-aos="animation-opacity">
+        <div class="testimonials__avatar"><img src="static\img\tushar1.jpeg" alt="President"></div>
+        <div class="testimonials__group">
+          <div class="testimonials__man">Rtr. Tushar Patial</div>
+          <div class="testimonials__position">Club President</div>
+        </div>
+      </a>
+      <a class="testimonials__link js-tabs-link active" href="#" data-aos="animation-opacity">
+        <div class="testimonials__avatar"><img src="static\img\sbsingh.png" alt="SB Singh"></div>
+        <div class="testimonials__group">
+          <div class="testimonials__man">Rtn. CB Singh (CA)</div>
+          <div class="testimonials__position">Parent Club President</div>
+        </div>
+      </a>
+      <a class="testimonials__link js-tabs-link" href="#" data-aos="animation-opacity">
+        <div class="testimonials__avatar"><img src="static\img\barkha.png" alt="Teacher"></div>
+        <div class="testimonials__group">
+          <div class="testimonials__man">Asst. Prof. Barkha </div>
+          <div class="testimonials__position">Teacher Incharge</div>
+        </div>
+      </a>
+      <a class="testimonials__link js-tabs-link" href="#" data-aos="animation-opacity">
+        <div class="testimonials__avatar"><img src="static\img\prem.jpeg" alt="Prem Bhatt"></div>
+        <div class="testimonials__group">
+          <div class="testimonials__man">Rtr. Prem Bhatt</div>
+          <div class="testimonials__position">Secretary Administration</div>
+        </div>
+      </a>
+      <a class="testimonials__link js-tabs-link" href="#" data-aos="animation-opacity">
+        <div class="testimonials__avatar"><img src="static\img\mansi.png" alt="Mansi"></div>
+        <div class="testimonials__group">
+          <div class="testimonials__man">Rtr. Mansi Biala</div>
+          <div class="testimonials__position">Secretary Reporting</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!--Note Section End -->
+
+
+
+
+  <!--About Section Start-->
+  <div class="section_travel">
+    <div class="travel__center center">
+      <div class="travel__head">
+        <h2 class="travel__title h2">Our Vision & Mission</h2>
+        <div class="travel__info info">Rota Year 2021 - 22 </div>
+      </div>
+      <div class="travel__row">
+        <div class="travel__col">
+          <div class="travel__list">
+            <div class="travel__item">
+              <div class="travel__number" style="background-color: #8BC5E5;">01</div>
+              <div class="travel__subtitle">Service Above Self</div>
+              <div class="travel__content">The club, consistently, persists to provide projects for the community which
+                aim at sustainable development in accordance with the core values of self-awareness, professionalism,
+                responsiveness and solidarity. </div>
+            </div>
+            <div class="travel__item">
+              <div class="travel__number" style="background-color: #92A5EF;">02</div>
+              <div class="travel__subtitle">Self - Reliant and Self- Sufficient. </div>
+              <div class="travel__content">It aims to generate all those opportunities which would drive people to be
+                self - reliant and self- sufficient. </div>
+            </div>
+            <div class="travel__item">
+              <div class="travel__number" style="background-color: #58C27D;">03</div>
+              <div class="travel__subtitle">Building the Personality</div>
+              <div class="travel__content">We aim at extending opportunities and a firm support for our members,
+                assisting in paving a way to make developed community and professional leaders for a better tomorrow.
+              </div>
+            </div>
+          </div><a class="button travel__button" href="/about">About Us
+          </a>
+        </div>
+        <div class="travel__col">
+          <div class="travel__wrapper">
+            <div class="travel__gallery">
+              <div class="travel__bg"><img srcSet="static\img\1.png" src="static\img\1.png"
+                  alt="Travel"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--About Section End-->
+
+
+  <!--About Video-->
+  <div class="section view">
+    <div class="view__center center">
+      <div class="view__head">
+        <div class="view__details">
+          <div class="view__stage">Meet people, try new activities, and</div>
+          <h2 class="view__title h2">Make a difference <br>with us!</h2>
+        </div><a class="button view__button" href="#">Join the Movement.</a>
+      </div>
+      <div class="view__body"><a class="view__preview js-open-phone" data-fancybox
+          href="https://youtu.be/Ak2BIHdxaeE"><img src="static\img\WhatsApp Image 2021-08-30 at 12.40.53 PM.jpeg" alt="Video">
+          <button class="play">
+            <svg class="icon icon-play">
+              <use xlink:href="#icon-play"></use>
+            </svg>
+          </button></a></div>
+    </div>
+  </div>
+  <!--About Video-->
+  <!--Faq-->
+  <div class="section faq">
+    <div class="faq__center center">
+      <div class="faq__top">
+        <div class="faq__stage">learn how to get started</div>
+        <h1 class="faq__title h2">Frequently asked questions</h1>
+        <div class="faq__info">
+          Join Stacks community now to get free updates and also alot of
+          freebies are waiting for you 
+        </div>
+        <div class="mobile-show">
+          <select class="select js-tabs-select">
+            <option>Rotary </option>
+            <option>Rotaract </option>
+            <option>Rotaract Club of CVS</option>
+            <option>College of Vocational Studies</option>
+          </select>
+        </div>
+      </div>
+      <div class="faq__row js-tabs">
+        <div class="faq__col">
+          <div class="faq__nav">
+            <a class="faq__link js-tabs-link active" href="#">
+              <svg class="icon icon-home">
+                <use xlink:href="#icon-home"></use>
+              </svg>Rotary</a><a class="faq__link js-tabs-link" href="#">
+              <svg class="icon icon-circle-and-square">
+                <use xlink:href="#icon-circle-and-square"></use>
+              </svg>Rotaract </a><a class="faq__link js-tabs-link" href="#">
+              <svg class="icon icon-lightning">
+                <use xlink:href="#icon-lightning"></use>
+              </svg>Our Club</a><a class="faq__link js-tabs-link" href="#">
+              <svg class="icon icon-pen">
+                <use xlink:href="#icon-pen"></use>
+              </svg>Our institution</a>
+          </div>
+        </div>
+        <div class="faq__col">
+          <div class="faq__box js-tabs-item" style="display: block">
+            <div class="faq__item">
+              <div class="faq__head">What is Rotary</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  Rotary is a global network of 1.2 million neighbors, friends, leaders, and problem-solvers who see a
+                  world where people unite and take action to create lasting change – across the globe, in our
+                  communities, and in ourselves.
+                </div>
+                <a href="https://www.rotary.org/en/about-rotary">
+                  <button class="button-stroke button-small faq__button">
+                    Learn more
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__head">What is the Rotary theme for 2021-22?</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  Serve to Change Lives
+                </div>
+
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__head">How did Rotary start ?</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  Rotary started with the vision of one man — Paul Harris. The Chicago attorney formed the Rotary Club
+                  of Chicago on 23 February 1905, so professionals with diverse backgrounds could exchange ideas and
+                  form meaningful, lifelong friendships.
+
+                  Over time, Rotary’s reach and vision gradually extended to humanitarian service. Members have a long
+                  track record of addressing challenges in their communities and around the world.
+                </div>
+                <a
+                  href="Serve to Change Livehttps://www.rotary.org/en/about-rotary/history#:~:text=Rotary%20started%20with%20the%20vision,gradually%20extended%20to%20humanitarian%20service.">
+                  <button class="button-stroke button-small faq__button">
+                    Know more
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__head">Who are famous Rotarians?</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  All Rotarians are important and famous in their own way, but there are some whose names are recognized
+                  worldwide.
+                  Here are some famous people who have worn the Rotary pin:
+                </div>
+                <a href="https://rotarypassport.org/stories/famous-rotarians">
+                  <button class="button-stroke button-small faq__button">
+                    Learn more
+                  </button>
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="faq__box js-tabs-item">
+            <div class="faq__item">
+              <div class="faq__head">What is Rotaract ?</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  Rotaract originally began as a Rotary International youth program in 1968 at Charlotte North Rotary
+                  Club in Charlotte, North Carolina, United States, and has grown into a major organization of over
+                  10,904 clubs spread around the world and over 203,000 members in 189 countries
+                </div>
+                <a href="https://www.rotary.org/en/get-involved/rotaract-clubs">
+                  <button class="button-stroke button-small faq__button">
+                    Learn more
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__head">what is Rotaract Motto ?</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  Self Development - Fellowship Through Service
+                </div>
+
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__head">Will it be worth to pay Rotaract Fees ?</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  It is a service, leadership, professional and community service organization (often miscommunicated as
+                  a Social Service Club) for young men and women aged 18 and over.[4]
+
+                  Rotaract focuses on the development of young adults as leaders in their communities and workplaces.
+                  Clubs around the world also take part in international service projects, in a global effort to bring
+                  peace and international understanding to the world.
+                </div>
+
+              </div>
+            </div>
+
+
+            <div class="faq__item">
+              <div class="faq__head">What are the benefits of joining Rotaract Club ?</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  The purpose of Rotaract is to provide an opportunity for young men and women to enhance the knowledge
+                  and skills that will assist them in personal development, to address the physical and social needs of
+                  their communities, and to promote better relations between all people worldwide through a framework of
+                  friendship ...
+                </div>
+                <a href="http://www.princeton.edu/~rotaract/rot_cons.pdf">
+                  <button class="button-stroke button-small faq__button">
+                    Learn more
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="faq__box js-tabs-item">
+            <div class="faq__item">
+              <div class="faq__head">About Rotaract Club of CVS </div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  Rotaract Club was formed in the college on 18th July 2018, sponsored by Rotary Club of Delhi South
+                  West. It
+                  connects CVS Rotaractors with the Rotaract Movement and the best charter club ,charted In 2018
+                  connecting the world with fellowship and making forever bonds.
+                </div>
+                <a href="/about">
+                  <button class="button-stroke button-small faq__button">
+                    Learn more
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__head">What is Stacks Design System</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  The Stacks series of products: Stacks: Landing Page Kit,
+                  Stacks: Portfolio Kit, Stacks: eCommerce Kit. "Stacks is
+                  a production-ready library of stackable content blocks
+                  built in React Native. Mix-and-match dozens of
+                  responsive elements to quickly configure your favorite
+                  landing page layouts or hit the ground running with 10
+                  pre-built templates, all in light or dark mode."
+                </div>
+                <button class="button-stroke button-small faq__button">
+                  Learn more
+                </button>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__head">How does it work</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  The Stacks series of products: Stacks: Landing Page Kit,
+                  Stacks: Portfolio Kit, Stacks: eCommerce Kit. "Stacks is
+                  a production-ready library of stackable content blocks
+                  built in React Native. Mix-and-match dozens of
+                  responsive elements to quickly configure your favorite
+                  landing page layouts or hit the ground running with 10
+                  pre-built templates, all in light or dark mode."
+                </div>
+                <button class="button-stroke button-small faq__button">
+                  Learn more
+                </button>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__head">Dose it suppport Dark Mode</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  The Stacks series of products: Stacks: Landing Page Kit,
+                  Stacks: Portfolio Kit, Stacks: eCommerce Kit. "Stacks is
+                  a production-ready library of stackable content blocks
+                  built in React Native. Mix-and-match dozens of
+                  responsive elements to quickly configure your favorite
+                  landing page layouts or hit the ground running with 10
+                  pre-built templates, all in light or dark mode."
+                </div>
+                <button class="button-stroke button-small faq__button">
+                  Learn more
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="faq__box js-tabs-item">
+            <div class="faq__item">
+              <div class="faq__head">How does it work</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  The Stacks series of products: Stacks: Landing Page Kit,
+                  Stacks: Portfolio Kit, Stacks: eCommerce Kit. "Stacks is
+                  a production-ready library of stackable content blocks
+                  built in React Native. Mix-and-match dozens of
+                  responsive elements to quickly configure your favorite
+                  landing page layouts or hit the ground running with 10
+                  pre-built templates, all in light or dark mode."
+                </div>
+                <button class="button-stroke button-small faq__button">
+                  Learn more
+                </button>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__head">How to start with Stacks</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  The Stacks series of products: Stacks: Landing Page Kit,
+                  Stacks: Portfolio Kit, Stacks: eCommerce Kit. "Stacks is
+                  a production-ready library of stackable content blocks
+                  built in React Native. Mix-and-match dozens of
+                  responsive elements to quickly configure your favorite
+                  landing page layouts or hit the ground running with 10
+                  pre-built templates, all in light or dark mode."
+                </div>
+                <button class="button-stroke button-small faq__button">
+                  Learn more
+                </button>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__head">Dose it suppport Dark Mode</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  The Stacks series of products: Stacks: Landing Page Kit,
+                  Stacks: Portfolio Kit, Stacks: eCommerce Kit. "Stacks is
+                  a production-ready library of stackable content blocks
+                  built in React Native. Mix-and-match dozens of
+                  responsive elements to quickly configure your favorite
+                  landing page layouts or hit the ground running with 10
+                  pre-built templates, all in light or dark mode."
+                </div>
+                <button class="button-stroke button-small faq__button">
+                  Learn more
+                </button>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__head">Does it support Auto-Layout</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  The Stacks series of products: Stacks: Landing Page Kit,
+                  Stacks: Portfolio Kit, Stacks: eCommerce Kit. "Stacks is
+                  a production-ready library of stackable content blocks
+                  built in React Native. Mix-and-match dozens of
+                  responsive elements to quickly configure your favorite
+                  landing page layouts or hit the ground running with 10
+                  pre-built templates, all in light or dark mode."
+                </div>
+                <button class="button-stroke button-small faq__button">
+                  Learn more
+                </button>
+              </div>
+            </div>
+            <div class="faq__item">
+              <div class="faq__head">What is Stacks Design System</div>
+              <div class="faq__body">
+                <div class="faq__content">
+                  The Stacks series of products: Stacks: Landing Page Kit,
+                  Stacks: Portfolio Kit, Stacks: eCommerce Kit. "Stacks is
+                  a production-ready library of stackable content blocks
+                  built in React Native. Mix-and-match dozens of
+                  responsive elements to quickly configure your favorite
+                  landing page layouts or hit the ground running with 10
+                  pre-built templates, all in light or dark mode."
+                </div>
+                <button class="button-stroke button-small faq__button">
+                  Learn more
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--->
+
+{% endblock body %}

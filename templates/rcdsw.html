@@ -1,0 +1,71 @@
+{% extends 'base.html' %} 
+{% block title %}Rotaract Club of CVS | Parent Club{% endblock title %} 
+{% block body %}
+
+<div class="outer__inner">
+    <div class="section wishlists js-tabs">
+        <div class="wishlists__center center">
+            <div class="control">
+                <a class="button-stroke button-small control__button" href="/">
+                    <svg class="icon icon-arrow-left">
+                        <use xlink:href="#icon-arrow-left"></use>
+                    </svg><span>Go home</span>
+                </a>
+                <ul class="breadcrumbs">
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="/ ">Home</a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link" href="/about ">About</a>
+                    </li>
+                    <li class="breadcrumbs__item">Our Parent Club</li>
+                </ul>
+            </div>
+
+            <div class="section description">
+                <div class="description__center center">
+                    <div class="description__wrapper">
+                        <div class="description__group">
+                            <div class="description__section">
+                                <div class="description__content">
+                                    <h4>About</h4>
+                                    <p>
+                                        Rotary Club Of Delhi South West was chartered under Rotary
+                                        International Dist 3010, on 1st Oct 1985 by Charter
+                                        President Rajan Kochhar. It has had 27 past presidents,
+                                        including the present incumbent, who in their tenure each
+                                        year have given unique leadership as per their individual
+                                        strength, capacity, motivation and temperament. Whether,
+                                        it's a Community Service Project, a Fellowship Dinner,
+                                        Speaker Meeting or an Out-Station Trip, the bonding between
+                                        members is amazing
+                                    </p>
+                                </div>
+                                <div class="description__full">
+                                    <div class="description__content description__content_hide">
+                                        <p></p>
+                                    </div>
+                                    <button class="button-stroke button-small description__button">
+                                        Show more
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="travel__col">
+                        <div class="travel__wrapper">
+                            <div class="travel__gallery">
+                                <div class="travel__bg">
+                                    <img srcset="static\img\4.png" src="static\img\4.png"
+                                        alt="RCDSW" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

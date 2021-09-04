@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %}Rotaract Club of CVS | Gallery{% endblock title %}
+
+{% block body %}
+
+
+<div class="outer__inner">
+  <div class="section wishlists js-tabs">
+    <div class="wishlists__center center">
+      <div class="control">
+        <a class="button-stroke button-small control__button" href="/">
+          <svg class="icon icon-arrow-left">
+            <use xlink:href="#icon-arrow-left"></use>
+          </svg><span>Go home</span>
+        </a>
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/ ">Home</a></li>
+          <li class="breadcrumbs__item">Team</li>
+        </ul>
+      </div>
+      <div class="section live">
+        <div class="live__center center">
+          <div class="live__head">
+            <h2 class="live__title h2"> Executive Board</h2>
+            <div class="live__info info">Keep calm & travel on</div>
+          </div>
+          <div class="live__wrapper">
+            <div class="live__slider js-slider-live js-slider-resize">
+            {% for x in council %}
+              <a class="live__item" href="{{x.url}}">
+                <div class="live__preview"><img srcSet="{{x.img.url}}" src="{{x.img.url}}"
+                    alt="Live"></div>
+                <div class="live__subtitle">{{x.name}}</div>
+                <div class="live__content">{{x.position}}</div>
+              </a>
+              {% endfor %}
+            </div>
+          </div>
+          <div class="live__btns">
+            <button class="button-stroke button-small live__button">
+              <div class="loader"></div><span>Load more</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section places">
+    <div class="places__center center">
+      <div class="places__inner">
+        <div class="places__head">
+          <h2 class="places__title h2">Board of Directors</h2>
+          <div class="places__info info">10,789 beautiful places to go</div>
+        </div>
+        <div class="places__wrapper">
+          <div class="places__slider js-slider-places js-slider-resize">
+          {% for x in director %}
+            <a class="places__item" href="{{x.url}}">
+              <div class="status-gray places__number">{{x.rotaryid}}</div>
+              <div class="places__preview"><img src="{{x.img.url}}" alt="{{x.name}}"></div>
+              <div class="places__subtitle">{{x.name}}</div>
+              <div class="places__time">{{x.position}}</div>
+            </a>
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+{% endblock body %}
