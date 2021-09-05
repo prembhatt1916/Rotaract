@@ -1,1 +1,3 @@
-web: gunicorn Rotaract.wsgi --log-file - 
+web: gunicorn Rotaract.wsgi --log-file - --log-level debug
+python manage.py collectstatic --noinput
+manage.py migrate
