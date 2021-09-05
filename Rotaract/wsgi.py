@@ -8,11 +8,12 @@ https://docs.djangoproject.com/en/3.2/howto/deployment/wsgi/
 """
 
 import os
-from whitenoise.django import DjangoWhiteNoise
 from django.core.wsgi import get_wsgi_application
+from whitenoise.django import DjangoWhiteNoise
 
+application = get_wsgi_application()
 application = DjangoWhiteNoise(application)
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Rotaract.settings')
 
-application = get_wsgi_application()
+
