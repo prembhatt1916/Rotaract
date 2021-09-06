@@ -1,1 +1,1 @@
-web: gunicorn Rotaract.wsgi --log-file - 
+ waitress-serve --port=8000 Rotaract.wsgi:application
